@@ -44,9 +44,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // CORS
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://192.168.100.32:5173'],
+  origin: true,
   credentials: true
 }));
+
 
 // Rate limiting
 const limiter = rateLimit({
